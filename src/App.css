@@ -1,38 +1,122 @@
-.App {
+body{
+  background: linear-gradient(#004f0d7b, #547e00);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.cnt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 60%;
+}
+
+.res {
+  margin-top: 100px;
+  height: 450px;
+  border: 1px solid black;
+  width: 30%;
+  border-radius: 20px;
+  position: relative;
+  padding: 30px;
+}
+
+.card {
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 180px;
+  cursor: context-menu;
+  height: 280px;
+  width: 30%;
+  color: #bfff3e;
+  border: 1px solid rgb(21, 92, 0);
+  position: relative;
+}
+
+.card_show {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 180px;
+  height: 280px;
+  width: 30%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.show_btn {
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: rgba(0, 244, 20, 0.496);
+  width: 100px;
+  font-size: 26px;
+  color: #fff;
+  font-weight:lighter;
+  border: 1px dotted #fff;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.1s;
+}
+.show_btn:hover {
+  background-color: rgb(160, 175, 0);
+  zoom: 95%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.showResultBtn {
+  padding: 10px 20px;
+  position: absolute;
+  border: 1px solid #547e00;
+  background-color: #c6ff856e;
+  border-radius: 20px 0 20px 0;
+  color: #fff;
+  font-weight: bolder;
+  top: -60px;
+  left: calc(50% - 60px);
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.closeBtn {
+  outline: none;
+  border: 2px solid #000;
+  border-radius: 100%;
+  font-size: 18px;
+  width: 25px;
+  height: 25px;
+  color: black;
+  background-color: rgba(221, 221, 221, 0) ;
+  cursor: context-menu ;
+  position: absolute;
+  font-weight: bold;
+  top: 2%;
+  left: calc(100% - 30px);
+  transition: 0.4s;
+  opacity: 2;
+}
+.closeBtn:hover {
+background-color: rgba(187, 0, 0, 0.637);
+color: #fff;
+border: 1px solid #fff;
+font-weight:lighter;
+opacity: 1;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.info {
+  font-size: 22px;
+  margin-left: 30px;
 }
